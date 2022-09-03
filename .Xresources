@@ -1,0 +1,12 @@
+Xft.dpi: 85%
+
+URxvt.font: xft:SauceCodePro Nerd Font:size=12, xft:SauceCodePro Nerd Font:size=10, xft:SauceCodePro Nerd Font:size=8, xft:SauceCodePro Nerd Font:size=6
+URxvt.foreground: #e6e6e6
+URxvt.background: #333333
+URxvt.cursorColor: #fabd2f
+URxvt.geometry: 90x30
+URxvt.scrollBar:false
+URxvt.keysym.Control-Shift-V: eval:paste_clipboard
+URxvt.keysym.Control-Shift-C: eval:selection_to_clipboard
+URxvt.iso14755: false
+URxvt.iso14755_52: false
