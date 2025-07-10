@@ -1,0 +1,25 @@
+export JAVA_HOME=/usr/lib/jvm/default
+# export ZDOTDIR=$HOME/.config/zsh
+export ANDROID_HOME=$HOME/Android
+export PATH=$JAVA_HOME/bin:$PATH
+export TERMINAL=kitty
+export EDITOR=nvim
+export PATH=$HOME/.local/bin:$PATH
+export PATH=$PATH:$HOME/go/bin
+export PATH=$PATH:/opt/zen
+export HADOOP_HOME=$HOME/.local/hadoop-3.4.1
+export HADOOP_CLASSPATH=$JAVA_HOME/lib/tools.jar
+# export HADOOP_MAPRED_HOME=$HADOOP_HOME/share/hadoop/mapreduce
+export PATH=$PATH:$HADOOP_HOME/bin
+export PATH=$PATH:$HADOOP_HOME/sbin
+export PATH=$PATH:$HOME/.local/TURBOC3/BIN
+export PATH=$PATH:$HOME/.local/gophish/gophish
+export PIPENV_VENV_IN_PROJECT=1
+
+# pnpm
+export PNPM_HOME="/home/subrath/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end

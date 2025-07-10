@@ -1,0 +1,23 @@
+{
+  "lspconfig": {
+    "jdtls": {
+      "java.compile.nullAnalysis.mode": "automatic",
+      "java.configuration.updateBuildConfiguration": "interactive",
+      "java.configuration.runtimes": [
+        {
+          "name": "JavaSE-22",
+          "path": "/usr/lib/jvm/java-22-openjdk"
+        },
+        {
+          "name": "JavaSE-21",
+          "path": "/usr/lib/jvm/java-21-openjdk"
+        },
+        {
+          "name": "JavaSE-17",
+          "path": "/usr/lib/jvm/java-17-openjdk",
+          "default": true
+        }
+      ]
+    }
+  }
+}
