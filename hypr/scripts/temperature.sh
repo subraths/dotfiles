@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 get_temp() {
-  echo `hyprctl hyprsunset temperature`
+  hyprctl hyprsunset temperature
 }
 
 increase_temp() {

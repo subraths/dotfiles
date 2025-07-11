@@ -1,4 +1,4 @@
-#! /bin/sh
+#!/usr/bin/env bash
 
 iDIR="$HOME/.config/mako/icons/wifi.png"
 
