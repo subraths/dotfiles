@@ -1,0 +1,83 @@
+# =============================================================================
+# DOTFILES GITIGNORE
+# =============================================================================
+# Files and directories to exclude from version control
+
+# Backup files
+*.bak
+*.backup
+*~
+.*.swp
+.*.swo
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+/tmp/
+
+# Log files
+*.log
+logs/
+
+# Cache directories
+cache/
+.cache/
+
+# Runtime files
+*.pid
+*.socket
+
+# Editor specific files
+.vscode/
+.idea/
+*.sublime-*
+
+# Personal/sensitive files
+secrets.conf
+.env
+.env.local
+
+# Application specific ignores
+# Neovim
+lazy-lock.json
+
+# Shell history
+.bash_history
+.zsh_history
+
+# SSH keys (if accidentally placed here)
+id_rsa
+id_ed25519
+*.pem
+*.key
+
+# Package managers
+node_modules/
+.npm/
+.yarn/
+
+# Build artifacts
+dist/
+build/
+*.o
+*.so
+*.dylib
+
+# Vim swap files
+*.swp
+*.swo
+
+# Archives
+*.tar.gz
+*.zip
+*.rar
+*.7z

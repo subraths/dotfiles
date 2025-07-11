@@ -7,8 +7,8 @@ i=0
 while true
 do
 
-BatteryCapacity=`cat /sys/class/power_supply/BAT0/capacity`
-BatteryStatus=`cat /sys/class/power_supply/BAT0/status`
+BatteryCapacity=$(cat /sys/class/power_supply/BAT0/capacity)
+BatteryStatus=$(cat /sys/class/power_supply/BAT0/status)
 BatteryDischarging="Discharging"
 BatteryCharging="Charging"
 BatteryFull="Full"
@@ -16,15 +16,15 @@ CriticalAlert=35
 NormalAlert=50
 LowAlert=40
 
-	if [[ "$BatteryStatus" == "$BatteryDischarging" ]] && [ $BatteryCapacity -le $CriticalAlert ]; then
+	if [[ "$BatteryStatus" == "$BatteryDischarging" ]] && [ "$BatteryCapacity" -le "$CriticalAlert" ]; then
 		  ((i=0))
 		  notify-send -u critical 'Alert' 'Battery Low!!!'
 		  sleep 30
-	elif [[ "$BatteryStatus" == "$BatteryDischarging" ]] && [ $BatteryCapacity -le $NormalAlert ]; then
+	elif [[ "$BatteryStatus" == "$BatteryDischarging" ]] && [ "$BatteryCapacity" -le "$NormalAlert" ]; then
 		  ((i=0))
 		  notify-send -u normal 'Alert' 'Battery getting low...'
 		  sleep 60
-	elif [[ "$BatteryStatus" == "$BatteryDischarging" ]] && [ $BatteryCapacity -le $LowAlert ]; then
+	elif [[ "$BatteryStatus" == "$BatteryDischarging" ]] && [ "$BatteryCapacity" -le "$LowAlert" ]; then
 		  ((i=0))
 		  notify-send -u low 'Alert' 'Think about plugging in computer if possible...'
 		  sleep 300

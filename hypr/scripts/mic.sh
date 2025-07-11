@@ -1,14 +1,16 @@
-#! /bin/sh
+#!/usr/bin/env bash
 
 ###########  MIC NOT IMPLEMENTED!
 ###########  MODIFY TO YOUR NEEDS WHEN POSSIBLE
 
+iDIR="$HOME/.config/mako/icons"
+
 # Toggle Mic
 toggle_mic() {
-	if [ "$(pamixer --default-source --get-mute)" == "false" ]; then
+	if [ "$(pamixer --default-source --get-mute)" = "false" ]; then
 		pamixer --default-source -m && notify-send -h string:x-canonical-private-synchronous:sys-notify -u low -i "$iDIR/microphone-mute.png" "Microphone Switched OFF"
-	elif [ "$(pamixer --default-source --get-mute)" == "true" ]; then
-		pamixer -u --default-source u && notify-send -h string:x-canonical-private-synchronous:sys-notify -u low -i "$iDIR/microphone.png" "Microphone Switched ON"
+	elif [ "$(pamixer --default-source --get-mute)" = "true" ]; then
+		pamixer --default-source -u && notify-send -h string:x-canonical-private-synchronous:sys-notify -u low -i "$iDIR/microphone.png" "Microphone Switched ON"
 	fi
 }
 # Get icons

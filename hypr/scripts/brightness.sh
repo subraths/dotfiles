@@ -1,38 +1,74 @@
-#! /bin/sh
+#!/usr/bin/env bash
 
-iDIR="$HOME/.config/mako/icons"
+# =============================================================================
+# BRIGHTNESS CONTROL SCRIPT
+# =============================================================================
+# Manages display brightness with visual notifications
+# Usage: brightness.sh [--get|--inc|--dec]
+# Dependencies: brightnessctl, notify-send, mako
+# =============================================================================
 
-# Get brightness
+set -euo pipefail
+
+# Configuration
+readonly ICON_DIR="$HOME/.config/mako/icons"
+readonly STEP_SIZE="5%"
+
+# Ensure required commands are available
+command -v brightnessctl >/dev/null 2>&1 || { echo "Error: brightnessctl not found" >&2; exit 1; }
+command -v notify-send >/dev/null 2>&1 || { echo "Error: notify-send not found" >&2; exit 1; }
+
+# Get current brightness as percentage
 get_backlight() {
-  LIGHT="$(brightnessctl g)"
-  echo "$((100 * LIGHT/937))"
+  local light max_brightness
+  light="$(brightnessctl get)"
+  max_brightness="$(brightnessctl max)"
+  echo "$((100 * light / max_brightness))"
 }
 
-# Get icons
+# Get appropriate icon based on brightness level
 get_icon() {
+  local current
   current="$(get_backlight)"
-  if [[ ("$current" -ge "0") && ("$current" -le "40") ]]; then
-    echo "$iDIR/brightness-low.png"
-  elif [[ ("$current" -ge "40") && ("$current" -le "60") ]]; then
-    echo "$iDIR/brightness-mid.png"
-  elif [[ ("$current" -ge "60") && ("$current" -le "100") ]]; then
-    echo "$iDIR/brightness-high.png"
+  
+  if [[ "$current" -le 30 ]]; then
+    echo "$ICON_DIR/brightness-low.png"
+  elif [[ "$current" -le 70 ]]; then
+    echo "$ICON_DIR/brightness-mid.png"
+  else
+    echo "$ICON_DIR/brightness-high.png"
   fi
 }
 
-# Notify
+# Send notification with current brightness
 notify_user() {
-  notify-send -h string:x-canonical-private-synchronous:sys-notify -u low -i "$(get_icon)" "Brightness : "$(get_backlight)"%"
+  local current icon
+  current="$(get_backlight)"
+  icon="$(get_icon)"
+  
+  notify-send \
+    -h string:x-canonical-private-synchronous:sys-notify \
+    -u low \
+    -i "$icon" \
+    "Brightness: ${current}%"
 }
 
 # Increase brightness
 inc_backlight() {
-  brightnessctl set +1% && notify_user
+  if brightnessctl set +"$STEP_SIZE" >/dev/null 2>&1; then
+    notify_user
+  else
+    notify-send -u critical "Error" "Failed to increase brightness"
+  fi
 }
 
-# Decrease brightness
+# Decrease brightness  
 dec_backlight() {
-  brightnessctl set 1%- && notify_user
+  if brightnessctl set "$STEP_SIZE"- >/dev/null 2>&1; then
+    notify_user
+  else
+    notify-send -u critical "Error" "Failed to decrease brightness"
+  fi
 }
 
 # Execute accordingly
