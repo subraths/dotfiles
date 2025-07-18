@@ -1,7 +1,7 @@
 local o = vim.o
 
 vim.g.mapleader = " "
-o.clipboard = "unnamedplus"
+-- o.clipboard = "unnamedplus"
 o.number = true
 o.relativenumber = true
 o.tabstop = 2

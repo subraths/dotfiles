@@ -15,6 +15,7 @@ export PATH=$PATH:$HADOOP_HOME/sbin
 export PATH=$PATH:$HOME/.local/TURBOC3/BIN
 export PATH=$PATH:$HOME/.local/gophish/gophish
 export PIPENV_VENV_IN_PROJECT=1
+export GRIM_DEFAULT_DIR="$HOME/screen-shots"
 
 # pnpm
 export PNPM_HOME="/home/subrath/.local/share/pnpm"
