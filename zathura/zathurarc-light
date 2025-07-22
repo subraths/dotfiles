@@ -1,0 +1,46 @@
+set selection-clipboard clipboard
+set font "JetBrains Mono 20"
+set double-click-follow true
+#
+map <C-Button4> zoom in
+map <C-Button5> zoom out
+map <C-=> zoom in
+map <C--> zoom out
+set page-padding 0
+#
+set highlight-annotations true
+set highlight-annotations-color \#ff0000
+set highlight-annotations-opacity 0.5
+set highlight-annotations-border-color \#ff0000
+set highlight-annotations-border-opacity 0.5
+set highlight-annotations-border-width 1
+
+# map <C-i> toggle_index
+
+# map <C-d> set "first-page-column 1:2"
+
+
+# Zathura configuration file
+# See man `man zathurarc'
+
+# Open document in fit-width mode by default
+set adjust-open "best-fit"
+
+# One page per row by default
+set pages-per-row 1
+
+#stop at page boundries
+set scroll-page-aware "true"
+set smooth-scroll "true"
+set scroll-full-overlap 0.01
+set scroll-step 100
+
+#zoom settings
+set zoom-min 10
+set guioptions ""
+
+set render-loading "false"
+set scroll-step 50
+unmap f
+map f toggle_fullscreen
+map [fullscreen] f toggle_fullscreen

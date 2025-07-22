@@ -1,4 +1,4 @@
-export JAVA_HOME=/usr/lib/jvm/default
+# export JAVA_HOME=/usr/lib/jvm/java-17-jetbrains
 # export ZDOTDIR=$HOME/.config/zsh
 export ANDROID_HOME=$HOME/Android
 export PATH=$JAVA_HOME/bin:$PATH
