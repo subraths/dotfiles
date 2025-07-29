@@ -24,7 +24,8 @@ alias ya="yazi"
 # alias grep="rg"
 alias ta="tmux attach"
 alias books="cd ~/Books/mtech/ && ra"
-alias "git plog"="git log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short"
+alias glog="git log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short"
+alias gstat="git status"
 
 ex ()
 {
