@@ -28,3 +28,14 @@ ranger/plugins/__pycache__/
 *.pyo
 .mypy_cache/
 __pycache__/
+desktop/
+gtk-3.0/bookmarks
+hypr/20250718_07h48m47s_grim.png
+libfm/
+notify/
+pcmanfm/
+qBittorrent/
+torbrowser/
+transmission/
+uwsm/
+zsh/zsh_history
