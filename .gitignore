@@ -1,0 +1,26 @@
+.android/
+Android Open Source Project/
+Code - OSS/
+Code/
+Google/
+JetBrains/
+Thunar/
+balenaEtcher/
+dconf/
+dolphinrc
+fish/
+github-copilot/
+go/
+jgit/
+kde.org/
+mimeapps.list
+paru/
+pulse/
+session/
+sioyek/
+spotify/
+systemd/
+uv/
+xfce4/
+__pycache__/
+*.pyc
