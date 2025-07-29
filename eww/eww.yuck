@@ -1,0 +1,18 @@
+(defwindow time-widget
+  :monitor 0
+  :geometry (geometry :anchor "top right")
+  :stacking "fg"
+  :exclusive "true"
+  :focusable "none"
+  (time-display))
+
+(defpoll datetime :interval "1s"
+  :initial "00:00"
+  `date "+%a %b %d, %H:%M:%S"`)
+
+(defwidget time-display []
+  (box :class "time-container"
+       :orientation "horizontal"
+       :space-evenly false
+       :halign "end"
+    (label :class "time-text" :text datetime)))

@@ -1,0 +1,18 @@
+/* CSS Reset for the widget */
+* {
+  all: unset;
+}
+
+.time-container {
+  background-color: rgba(30, 30, 46, 0);
+  padding: 6px;
+  border-radius: 0 0 0 5px;
+}
+
+.time-text {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 12px;
+  font-weight: bold;
+  color: #ebdb34;
+  margin: 0px 0;
+}
