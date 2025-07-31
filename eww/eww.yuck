@@ -16,3 +16,27 @@
        :space-evenly false
        :halign "end"
     (label :class "time-text" :text datetime)))
+
+(defwindow power-widget
+  :monitor 0
+  :geometry (geometry :anchor "bottom right")
+  :stacking "bg"
+  :exclusive "true"
+  :focusable "none"
+  (power-controls)
+)
+
+(defwidget power-controls []
+  (box :orientation "horizontal" :spacing 10 :halign "center" :valign "center"
+    (button
+      :tooltip "Reboot"
+      :onclick "bash ~/.config/eww/reboot.sh"
+      (image :path "/usr/share/icons/Papirus/24x24/actions/system-reboot.svg" :width 32 :height 32)
+    )
+    (button
+      :tooltip "Poweroff"
+      :onclick "bash ~/.config/eww/shutdown.sh"
+      (image :path "/usr/share/icons/Papirus/24x24/actions/system-shutdown.svg" :width 32 :height 32)
+    )
+  )
+)
