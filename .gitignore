@@ -22,7 +22,7 @@ spotify/
 systemd/
 uv/
 xfce4/
-ranger/plugins/__pycache__/
+ranger/plugins/__pycache__
 *.pyc
 *.pyc
 *.pyo
