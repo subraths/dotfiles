@@ -4,9 +4,7 @@
 }
 
 .time-container {
-  background-color: rgba(30, 30, 46, 0);
-  padding: 6px;
-  border-radius: 0 0 0 5px;
+  padding-right: 0px;
 }
 
 .time-text {
@@ -14,4 +12,28 @@
   font-size: 12px;
   font-weight: bold;
   color: #ebdb34;
+  padding-right: 5px;
+}
+
+.power-controls-container {
+  padding-right: 5px;
+}
+
+.power-controls {
+  background-color: rgba(40, 40, 40, 0.70);
+  border-radius: 10px;
+  padding: 6px 10px;
+}
+
+.power-button {
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+
+.power-button:hover {
+  background-color: rgba(100, 100, 100, 0.20);
+}
+
+image {
+  margin: 0 2px;
 }

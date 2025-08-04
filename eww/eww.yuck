@@ -1,3 +1,13 @@
+(defvar show_alt false)
+
+(defpoll time :interval "1s"
+  :initial "00:00"
+  `date +%R`)
+
+(defpoll datetime :interval "1s"
+  :initial "YYYY-MM-DD HH:MM:SS"
+  `date "+%d-%b %R"`)
+
 (defwindow time-widget
   :monitor 0
   :geometry (geometry :anchor "top right")
@@ -27,16 +37,16 @@
 )
 
 (defwidget power-controls []
-  (box :orientation "horizontal" :spacing 10 :halign "center" :valign "center"
+  (box :class "power-controls-container" :orientation "horizontal" :spacing 6 :halign "center" :valign "center"
     (button
-      :tooltip "Reboot"
-      :onclick "bash ~/.config/eww/reboot.sh"
-      (image :path "/usr/share/icons/Papirus/24x24/actions/system-reboot.svg" :width 32 :height 32)
+      :class "power-button"
+      :onclick "bash ${EWW_CONFIG_DIR}/shutdown.sh"
+      (image :path "/usr/share/icons/Papirus/16x16/actions/system-reboot.svg" :width 32 :height 32)
     )
     (button
-      :tooltip "Poweroff"
-      :onclick "bash ~/.config/eww/shutdown.sh"
-      (image :path "/usr/share/icons/Papirus/24x24/actions/system-shutdown.svg" :width 32 :height 32)
+      :class "power-button"
+      :onclick "bash ${EWW_CONFIG_DIR}/reboot.sh"
+      (image :path "/usr/share/icons/Papirus/16x16/actions/system-shutdown.svg" :width 32 :height 32)
     )
   )
 )

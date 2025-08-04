@@ -1,2 +1,3 @@
-#!/bin/sh
-(sleep 0.2; systemctl poweroff) &
+#!/usr/bin/env bash
+
+(sleep 0.2; systemctl poweroff)
