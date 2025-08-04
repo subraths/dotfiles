@@ -12,26 +12,29 @@
   :monitor 0
   :geometry (geometry :anchor "top right")
   :stacking "fg"
-  :exclusive "true"
+  :exclusive "false"
   :focusable "none"
   (time-display))
 
-(defpoll datetime :interval "1s"
-  :initial "00:00"
-  `date "+%a %b %d, %H:%M:%S"`)
-
 (defwidget time-display []
-  (box :class "time-container"
-       :orientation "horizontal"
-       :space-evenly false
+  (box :orientation "horizontal"
        :halign "end"
-    (label :class "time-text" :text datetime)))
+       :class "time-container"
+    (button
+      :onclick "eww update show_alt=${!show_alt}"
+      (label
+        :text {show_alt ? datetime : time}
+        :class "time-text"
+      )
+    )
+  )
+)
 
 (defwindow power-widget
   :monitor 0
   :geometry (geometry :anchor "bottom right")
   :stacking "bg"
-  :exclusive "true"
+  :exclusive "false"
   :focusable "none"
   (power-controls)
 )
