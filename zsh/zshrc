@@ -63,5 +63,6 @@ bindkey "$terminfo[kcbt]" reverse-menu-complete
 . "/home/subrath/.deno/env"
 
 eval "$(uv generate-shell-completion zsh)"
+eval "$(direnv hook zsh)"
 
 . "$HOME/.local/share/../bin/env"
