@@ -1,4 +1,4 @@
-#/usr/bin/env bash
+#/usr/bin/env zsh
 
 if [[ $1 == dark || $1 == light ]]; then
   ln -sf $XDG_CONFIG_HOME/zathura/zathurarc-$1 $XDG_CONFIG_HOME/zathura/zathurarc

@@ -29,14 +29,26 @@
   /* padding: 6px 10px; */
 }
 
+<<<<<<< HEAD
 .power-button {
   /* border-radius: 6px; */
   transition: background 0.2s;
 }
 
-.power-button:hover {
-  background-color: rgba(100, 100, 100, 0.20);
+.power-button-poweroff {
+  color: #000000;
+  border-radius: 6px;
+  transition: background 0.2s;
 }
+
+.power-button-reboot:hover {
+  background-color: rgba(100, 100, 100, 0.50);
+}
+
+.power-button-poweroff:hover {
+  background-color: rgba(100, 100, 100, 0.92);
+}
+
 
 image {
   /* margin: 0 2px; */
