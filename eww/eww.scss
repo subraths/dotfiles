@@ -4,7 +4,9 @@
 }
 
 .time-container {
-  padding-right: 0px;
+  background-color: rgba(0,0,0,0.5);
+  padding: 0px 3px;
+  border-radius: 0 0px 0px 4px;
 }
 
 .time-text {
@@ -12,21 +14,23 @@
   font-size: 12px;
   font-weight: bold;
   color: #ebdb34;
-  padding-right: 5px;
+  padding-right: 0px;
 }
 
 .power-controls-container {
-  padding-right: 5px;
+  background-color: rgba(0,0,0,0.3);
+  padding: 0px 3px;
+  border-radius: 4px 0px 0px 0px;
 }
 
 .power-controls {
   background-color: rgba(40, 40, 40, 0.70);
-  border-radius: 10px;
-  padding: 6px 10px;
+  /* border-radius: 10px; */
+  /* padding: 6px 10px; */
 }
 
 .power-button {
-  border-radius: 6px;
+  /* border-radius: 6px; */
   transition: background 0.2s;
 }
 
@@ -35,5 +39,72 @@
 }
 
 image {
-  margin: 0 2px;
+  /* margin: 0 2px; */
 }
+
+
+/* -----------------------------------------------------
+ * eww.scss - Spotify Widget Styles
+ * ----------------------------------------------------- */
+
+// General widget container
+/* .spotify-widget { */
+/*   background-color: #1e1e2e; // Catppuccin Macchiato Base */
+/*   color: #cad3f5; // Catppuccin Macchiato Text */
+/*   border-radius: 16px; */
+/*   padding: 10px; */
+/*   font-family: "Inter", sans-serif; */
+/* } */
+/**/
+/* // Album art */
+/* .album-art { */
+/*   background-size: cover; */
+/*   background-position: center; */
+/*   min-width: 80px; */
+/*   min-height: 80px; */
+/*   border-radius: 12px; */
+/*   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); */
+/*   margin-left: 5px; */
+/* } */
+/**/
+/* // Song and artist text */
+/* .song-title { */
+/*   font-size: 1.1em; */
+/*   font-weight: bold; */
+/*   color: #cba6f7; // Catppuccin Macchiato Mauve */
+/* } */
+/**/
+/* .song-artist { */
+/*   font-size: 0.9em; */
+/*   font-weight: normal; */
+/*   color: #a6adc8; // Catppuccin Macchiato Subtext0 */
+/* } */
+/**/
+/* // Control buttons container */
+/* .controls { */
+/*   margin-top: 5px; */
+/* } */
+/**/
+/* // Individual control buttons */
+/* .control-button { */
+/*   font-size: 1.4em; */
+/*   color: #cad3f5; // Catppuccin Macchiato Text */
+/*   background: none; */
+/*   border: none; */
+/*   padding: 0 10px; */
+/*   transition: all 0.3s ease; */
+/**/
+/*   &:hover { */
+/*     color: #f5c2e7; // Catppuccin Macchiato Pink */
+/*     transform: scale(1.1); */
+/*   } */
+/* } */
+/**/
+/* // Specific button colors on hover */
+/* .play-pause:hover { */
+/*   color: #a6e3a1; // Catppuccin Macchiato Green */
+/* } */
+/* .prev:hover, .next:hover { */
+/*   color: #89b4fa; // Catppuccin Macchiato Blue */
+/* } */
+/**/

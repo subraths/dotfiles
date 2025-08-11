@@ -43,13 +43,93 @@
   (box :class "power-controls-container" :orientation "horizontal" :spacing 6 :halign "center" :valign "center"
     (button
       :class "power-button"
-      :onclick "bash ${EWW_CONFIG_DIR}/shutdown.sh"
-      (image :path "/usr/share/icons/Papirus/16x16/actions/system-reboot.svg" :width 32 :height 32)
+      :onclick "bash ${EWW_CONFIG_DIR}/reboot.sh"
+      (image :path "/usr/share/icons/Papirus/16x16/actions/system-reboot.svg" :width 24 :height 24)
     )
     (button
       :class "power-button"
-      :onclick "bash ${EWW_CONFIG_DIR}/reboot.sh"
-      (image :path "/usr/share/icons/Papirus/16x16/actions/system-shutdown.svg" :width 32 :height 32)
+      :onclick "bash ${EWW_CONFIG_DIR}/shutdown.sh"
+      (image :path "/usr/share/icons/Papirus/16x16/actions/system-shutdown.svg" :width 24 :height 24)
     )
   )
 )
+
+;; -----------------------------------------------------
+;; eww.yuck - Spotify Widget Configuration
+;; -----------------------------------------------------
+;; Dependencies:
+;; - playerctl
+;; - bash
+;; - coreutils (for mktemp)
+;; - curl
+;; - jq
+;; -----------------------------------------------------
+
+;; -----------------
+;; |   Variables   |
+;; -----------------
+;; (defpoll spotify_status :interval "1s" :initial "{}"
+;;   `~/.config/eww/scripts/get-spotify-status.sh`)
+;;
+;; (defvar spotify_reveal false)
+;;
+;; ;; -----------------
+;; ;; |    Widgets    |
+;; ;; -----------------
+;;
+;; ;; Main Spotify Widget Definition
+;; (defwidget spotify []
+;;   (eventbox
+;;     :onhover "eww update spotify_reveal=true"
+;;     :onhoverlost "eww update spotify_reveal=false"
+;;     (box
+;;       :class "spotify-widget"
+;;       :orientation "h"
+;;       :space-evenly false
+;;       :spacing 20
+;;       (box
+;;         :class "album-art"
+;;         :style "background-image: url('${spotify_status.artUrl ?: "images/placeholder.png"}');")
+;;       (revealer
+;;         :transition "slideright"
+;;         :reveal spotify_reveal
+;;         :duration "550ms"
+;;         (box
+;;           :orientation "v"
+;;           :space-evenly false
+;;           :valign "center"
+;;           :spacing 10
+;;           (label
+;;             :class "song-title"
+;;             :limit-width 25
+;;             :wrap true
+;;             :text {spotify_status.title ?: "Nothing Playing"})
+;;           (label
+;;             :class "song-artist"
+;;             :limit-width 25
+;;             :wrap true
+;;             :text {spotify_status.artist ?: "Spotify"})
+;;           (box
+;;             :class "controls"
+;;             :orientation "h"
+;;             :space-evenly true
+;;             :spacing 5
+;;             (button :class "control-button prev" :onclick "playerctl previous" "󰒮")
+;;             (button :class "control-button play-pause" :onclick "playerctl play-pause" {spotify_status.status == "Playing" ? "󰏤" : "󰐊"})
+;;             (button :class "control-button next" :onclick "playerctl next" "󰒭")))))))
+;;
+;; ;; -----------------
+;; ;; |    Windows    |
+;; ;; -----------------
+;; (defwindow spotify_widget
+;;   :monitor 0
+;;   :geometry (geometry :x "20px"
+;;                       :y "20px"
+;;                       :width "auto"
+;;                       :height "80px")
+;;   :stacking "fg"
+;;   :reserve (struts :distance "90px" :side "top")
+;;   :windowtype "dock"
+;;   :wm-ignore false
+;;   (spotify))
+;;
