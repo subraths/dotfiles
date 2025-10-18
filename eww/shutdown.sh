@@ -1,3 +1,3 @@
-#!/usr/bin/env bash
+#!/usr/bin/env zsh
 
-(sleep 0.2; systemctl poweroff)
+(sleep 0.1; systemctl poweroff)
