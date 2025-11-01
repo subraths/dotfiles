@@ -6,17 +6,6 @@ map <C-Button4> zoom in
 map <C-Button5> zoom out
 map <C-=> zoom in
 map <C--> zoom out
-set page-padding 0
-<<<<<<< HEAD
-=======
-#
-# set highlight-annotations true
-# set highlight-annotations-color \#ff0000
-# set highlight-annotations-opacity 0.5
-# set highlight-annotations-border-color \#ff0000
-# set highlight-annotations-border-opacity 0.5
-# set highlight-annotations-border-width 1
->>>>>>> cd38968 (update)
 
 # map <C-i> toggle_index
 
@@ -37,6 +26,7 @@ set scroll-page-aware "true"
 set scroll-full-overlap 0.01
 set scroll-step 100
 
+
 #zoom settings
 set zoom-min 10
 set guioptions ""
@@ -46,3 +36,47 @@ set scroll-step 50
 unmap f
 map f toggle_fullscreen
 map [fullscreen] f toggle_fullscreen
+
+
+# zathurarc-light-modern
+
+# Main colors
+set default-bg            "#FAFAFA"   # background
+set default-fg            "#1C1C1C"   # text
+
+# Status bar
+set statusbar-bg          "#E6E6E6"
+set statusbar-fg          "#333333"
+
+# Input bar
+set inputbar-bg           "#F0F0F0"
+set inputbar-fg           "#000000"
+
+# Notifications
+set notification-error-bg    "#E06C75"
+set notification-error-fg    "#FFFFFF"
+
+set notification-warning-bg  "#E5C07B"
+set notification-warning-fg  "#1C1C1C"
+
+set notification-bg          "#61AFEF"
+set notification-fg          "#FFFFFF"
+
+# Highlights
+set highlight-color          "#FFD54F20"   # amber with 50% alpha
+set highlight-active-color   "#42A5F520"   # blue with 50% alpha
+
+
+# Completion menu
+set completion-bg            "#F2F2F2"
+set completion-fg            "#202020"
+set completion-highlight-bg  "#98C379"
+set completion-highlight-fg  "#FFFFFF"
+
+# Recoloring for PDFs
+set recolor                  "true"
+set recolor-lightcolor       "#FAFAFA"
+set recolor-darkcolor        "#1C1C1C"
+set recolor-reverse-video    "false"
+set recolor-keephue          "true"
+

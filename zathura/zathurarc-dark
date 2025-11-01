@@ -6,18 +6,6 @@ map <C-Button4> zoom in
 map <C-Button5> zoom out
 map <C-=> zoom in
 map <C--> zoom out
-set page-padding 0
-<<<<<<< HEAD
-
-=======
-#
-# set highlight-annotations true
-# set highlight-annotations-color \#ff0000
-# set highlight-annotations-opacity 0.5
-# set highlight-annotations-border-color \#ff0000
-# set highlight-annotations-border-opacity 0.5
-# set highlight-annotations-border-width 1
->>>>>>> cd38968 (update)
 
 # map <C-i> toggle_index
 
@@ -40,46 +28,53 @@ set scroll-step 100
 
 #zoom settings
 set zoom-min 10
-set guioptions ""
-
-# zathurarc-dark
-
-set default-bg "#000000" #00
-set default-fg "#F7F7F6" #01
-
-set statusbar-fg "#B0B0B0" #04
-set statusbar-bg "#202020" #01
-
-set inputbar-bg "#151515" #00 currently not used
-set inputbar-fg "#FFFFFF" #02
-
-set notification-error-bg "#AC4142" #08
-set notification-error-fg "#151515" #00
-
-set notification-warning-bg "#AC4142" #08
-set notification-warning-fg "#151515" #00
-
-set highlight-color "#F4BF75" #0A
-set highlight-active-color "#6A9FB5" #0D
-
-set completion-highlight-fg "#151515" #02
-set completion-highlight-bg "#90A959" #0C
-
-set completion-bg "#303030" #02
-set completion-fg "#E0E0E0" #0C
-
-set notification-bg "#90A959" #0B
-set notification-fg "#151515" #00
-
-set recolor "true"
-set recolor-lightcolor "#000000" #00
-set recolor-darkcolor "#E0E0E0" #06
-set recolor-reverse-video "true"
-set recolor-keephue "true"
-
 
 set render-loading "false"
 set scroll-step 50
 unmap f
 map f toggle_fullscreen
 map [fullscreen] f toggle_fullscreen
+
+
+# zathurarc-dark-modern
+
+# Main colors
+set default-bg            "#0D0D0D"   # background
+set default-fg            "#EAEAEA"   # foreground text
+
+# Status bar
+set statusbar-bg          "#1A1A1A"
+set statusbar-fg          "#B8B8B8"
+
+# Input bar
+set inputbar-bg           "#151515"
+set inputbar-fg           "#FFFFFF"
+
+# Notifications
+set notification-error-bg    "#FF5F5F"
+set notification-error-fg    "#1A1A1A"
+
+set notification-warning-bg  "#FFB84D"
+set notification-warning-fg  "#1A1A1A"
+
+set notification-bg          "#4DA6FF"
+set notification-fg          "#0D0D0D"
+
+# Highlights
+set highlight-color          "#FFD369"   # yellow accent
+set highlight-active-color   "#5F9EA0"   # teal accent
+
+# Completion menu
+set completion-bg            "#2A2A2A"
+set completion-fg            "#D0D0D0"
+set completion-highlight-bg  "#5FD787"
+set completion-highlight-fg  "#0D0D0D"
+
+# Recoloring for PDFs
+set recolor                  "true"
+set recolor-lightcolor       "#0D0D0D"
+set recolor-darkcolor        "#EAEAEA"
+set recolor-reverse-video    "true"
+set recolor-keephue          "true"
+
+

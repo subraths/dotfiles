@@ -15,7 +15,7 @@ return {
 				jsonls = {},
 				bashls = {},
 				awk_ls = {},
-				typescript_language_server = {},
+				ts_ls = {},
 				-- copilot_lsp = {},
 			},
 		},

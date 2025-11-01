@@ -1,2 +1,2 @@
-(include "./power.yuck")
-(include "./time.yuck")
+(include "./windows/power-window.yuck")
+(include "./windows/top-bar.yuck")

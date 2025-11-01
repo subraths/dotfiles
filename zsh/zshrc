@@ -23,7 +23,9 @@ alias ra="ranger"
 alias ya="yazi"
 # alias grep="rg"
 alias ta="tmux attach"
-alias books="cd ~/Books/mtech/ && ra"
+alias books="cd ~/books/ && ra"
+alias self="cd ~/books/self-help/ && ra"
+alias coding="cd ~/books/coding-principles/ && ra"
 alias glog="git log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short"
 alias gstat="git status"
 
@@ -64,5 +66,5 @@ bindkey "$terminfo[kcbt]" reverse-menu-complete
 eval "$(uv generate-shell-completion zsh)"
 eval "$(direnv hook zsh)"
 
-. "$HOME/.local/share/../bin/env"
 . "/home/ss/.deno/env"
+[ -f /opt/miniconda3/etc/profile.d/conda.sh ] && source /opt/miniconda3/etc/profile.d/conda.sh

@@ -13,9 +13,12 @@ export PATH=$PATH:$HADOOP_HOME/bin
 export PATH=$PATH:$HADOOP_HOME/sbin
 export PATH=$PATH:$HOME/.local/TURBOC3/BIN
 export PATH=$PATH:$HOME/.local/gophish/gophish
+export PATH=$PATH:/opt/flutter/bin
 export PIPENV_VENV_IN_PROJECT=1
 export GRIM_DEFAULT_DIR="$HOME/screen-shots"
 export XDG_CONFIG_HOME=$HOME/.config
+export UV_CACHE_DIR=$HOME/.cache/uv
+export QT_QPA_PLATFORMTHEME=gtk3
 
 # pnpm
 export PNPM_HOME="/home/subrath/.local/share/pnpm"

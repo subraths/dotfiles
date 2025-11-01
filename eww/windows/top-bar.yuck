@@ -1,0 +1,47 @@
+(defvar show_alt false)
+
+(defpoll time
+  :interval "1s"
+  :initial "00:00"
+  `date +%R`)
+
+(defpoll datetime
+  :interval "1s"
+  :initial "YYYY-MM-DD HH:MM:SS"
+  `date "+%b %d, %a"`)
+
+(defpoll wifi-status
+  :interval "5s"
+  :initial "No Wifi"
+  `iwctl station wlan0 get-networks | grep -i ">" | awk '{print $4}'`
+)
+
+
+(defwindow top-bar
+  :monitor 0
+  :geometry (geometry :anchor "top right")
+  :stacking "fg"
+  :exclusive "false"
+  :focusable "none"
+  (top-bar-container))
+
+(defwidget top-bar-container []
+  (box
+    :class "top-bar-container"
+    :space-evenly false
+    :spacing 6
+    (time)
+  )
+)
+
+
+(defwidget time []
+  (box
+    (button
+      :onclick "eww update show_alt=${!show_alt}"
+      (label
+        :text {show_alt ? "${wifi-status} | ${datetime}" : time}
+        :class "time-text")
+    )
+  )
+)

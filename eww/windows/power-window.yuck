@@ -1,0 +1,18 @@
+(defwindow power-window
+  :monitor 0
+  :geometry (geometry :anchor "bottom right")
+  :stacking "bg"
+  :exclusive "false"
+  :focusable "none"
+  (power-controls))
+
+(defwidget power-controls []
+  (box :class "power-controls-container" :orientation "horizontal" :spacing 6 :halign "center" :valign "center"
+    (button
+      :class "power-button"
+      :onclick "zsh ${EWW_CONFIG_DIR}/scripts/reboot.sh"
+      (image :path "/home/ss/.icons/Papirus/16x16/actions/system-reboot.svg" :width 24 :height 24))
+    (button
+      :class "power-button"
+      :onclick "zsh ${EWW_CONFIG_DIR}/scripts/shutdown.sh"
+      (image :path "/home/ss/.icons/Papirus/16x16/actions/system-shutdown.svg" :width 24 :height 24))))
