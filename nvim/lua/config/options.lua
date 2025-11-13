@@ -74,8 +74,8 @@ opt.formatoptions:remove({ "c", "r", "o" }) -- Don't insert the current comment 
 
 -- Fill chars
 opt.fillchars = {
-	foldopen = "",
-	foldclose = "",
+	-- foldopen = 10,
+	-- foldclose = 10,
 	fold = " ",
 	foldsep = " ",
 	diff = "╱",
@@ -123,10 +123,7 @@ vim.fn.sign_define(
 	"DapBreakpointRejected",
 	{ text = "", texthl = "DapBreakpoint", linehl = "DapBreakpoint", numhl = "DapBreakpoint" }
 )
-vim.fn.sign_define(
-	"DapLogPoint",
-	{ text = "", texthl = "DapLogPoint", linehl = "DapLogPoint", numhl = "DapLogPoint" }
-)
+vim.fn.sign_define("DapLogPoint", { text = "", texthl = "DapLogPoint", linehl = "DapLogPoint", numhl = "DapLogPoint" })
 vim.fn.sign_define("DapStopped", { text = "", texthl = "DapStopped", linehl = "DapStopped", numhl = "DapStopped" })
 
 -- Completion highlights

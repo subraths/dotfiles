@@ -10,7 +10,7 @@ iwctl station wlan0 scan
 
 sleep 1
 
-known_devices=("AndroidAP_1996" "Excitel_Narayana 1st floorA" "DESKTOP-GP5B1LU 8890")
+known_devices=("Act" "AndroidAP_1996" "Excitel_Narayana 1st floorA" "DESKTOP-GP5B1LU 8890")
 sleep 1
 
 # search for known devices

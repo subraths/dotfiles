@@ -26,6 +26,7 @@ alias ta="tmux attach"
 alias books="cd ~/books/ && ra"
 alias self="cd ~/books/self-help/ && ra"
 alias coding="cd ~/books/coding-principles/ && ra"
+alias dsa="cd ~/books/dsa/ && ra"
 alias glog="git log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short"
 alias gstat="git status"
 
