@@ -75,7 +75,7 @@ opt.formatoptions:remove({ "c", "r", "o" }) -- Don't insert the current comment 
 -- Fill chars
 opt.fillchars = {
 	-- foldopen = 10,
-	-- foldclose = 10,
+	-- foldclose = "",
 	fold = " ",
 	foldsep = " ",
 	diff = "╱",
