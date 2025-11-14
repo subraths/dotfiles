@@ -18,6 +18,7 @@ o.scrolloff = 3
 o.textwidth = 0
 o.wrapmargin = 1
 o.mousemodel = "extend"
+o.foldenable = false
 
 vim.cmd("set formatoptions+=t")
 vim.cmd("set formatoptions-=l")
