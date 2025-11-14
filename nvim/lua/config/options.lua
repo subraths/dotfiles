@@ -67,6 +67,7 @@ opt.laststatus = 3 -- Global statusline
 opt.cmdheight = 1
 opt.completeopt = "menu,menuone,noselect"
 opt.wildmode = "longest:full,full"
+o.foldenable = false
 
 -- Format options
 opt.formatoptions:append("j") -- Delete comment character when joining commented lines
